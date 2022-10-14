@@ -1,0 +1,36 @@
+body{
+    background-color: rgba(126, 126, 245, 0.301);
+    text-align: center;
+}
+#botones{
+    text-align: center;
+}
+.c{
+    display: flex;  
+}
+.b{
+    font-size: 20px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    border: 1px solid blue;
+    background-color: aqua;
+    cursor: pointer;
+    margin: 5px;
+}
+.d{
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    background-color: rgba(109, 109, 212, 0.342);
+    margin: 0 auto;
+    height: auto;
+    width: 50%;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: solid 1px blueviolet;
+}
+.n{
+    width: 20%;
+    background-color: rgb(158, 255, 255);
+    border-radius: 10px;
+}

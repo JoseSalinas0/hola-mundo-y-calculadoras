@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>HCC</title>
+</head>
+<body>
+    <div id="botones">
+        <button id="hm" class="b">Hola Mundo</button>
+        <button id="c" class="b">Calculadora</button>
+        <button id="co" class="b">Calculadora Con POO</button>
+    </div>
+    <div class="c">
+        <div class="d" id="dhm" style="display: none;">
+            <h1>
+                <span id="sh"></span>
+            </h1>
+    </div>
+    <div class="d" id="dc" style="display: none;">
+        <h1>Calculadora</h1>
+        <label for="">Escriba el primer número:</label>
+        <br>
+        <input class="n" id="num11" type="number" value="0"/>
+        <br><br>
+        <label for="">Escriba el segundo número:</label>
+        <br>
+        <input class="n" id="num21" type="number" value="0"/>
+        <br><br>
+        <button class="b" id="sum1">+</button>
+        <button class="b" id="res1">-</button>
+        <button class="b" id="div1">/</button>
+        <button class="b" id="mul1">*</button>
+        <button class="b" id="bor1">««</button>
+        <br>
+        <label for="">Resultado:</label>
+        <br>
+        <input class="n" id="resul1" type="number" value="0" readonly/>
+        <br><br>
+    </div>
+    <div class="d" id="dco" style="display: none;">
+        <h1>Calculadora Orientada a Objetos</h1>
+        <label for="">Escriba el primer número:</label>
+        <br>
+        <input class="n" id="num12" type="number" value="0" />
+        <br><br>
+        <label for="">Escriba el segundo número:</label>
+        <br>
+        <input class="n" id="num22" type="number" value="0"/>
+        <br><br>
+        <button class="b" id="sum2">+</button>
+        <button class="b" id="res2">-</button>
+        <button class="b" id="div2">/</button>
+        <button class="b" id="mul2">*</button>
+        <button class="b" id="bor2">««</button>
+        <br>
+        <label for="">Resultado:</label>
+        <br>
+        <input class="n" id="resul2" type="number" value="0" readonly/>
+        <br><br>
+    </div>
+    </div>
+    <script src="hola.js"></script>
+    <script src="calculadora.js"></script>
+    <script src="calculadoraPOO.js"></script>
+    <script>
+        var bhm=document.getElementById('hm');
+        var bc=document.getElementById('c');
+        var bco=document.getElementById('co');
+        var dhm=document.getElementById('dhm');
+        var dc=document.getElementById('dc');
+        var dco=document.getElementById('dco');
+        var vhm=false;
+        var vc=false;
+        var vco=false;
+
+        bhm.addEventListener('click', function(){
+            if(vhm==false){
+                dhm.style.display="block";
+                dc.style.display="none";
+                dco.style.display="none";
+                vco=false;
+                vc=false;
+                vhm=true;
+            }else{
+                dhm.style.display="none";
+                vhm=false;
+            }
+        })
+
+        bc.addEventListener('click', function(){
+            if(vc==false){
+                dc.style.display="block";
+                dhm.style.display="none";
+                dco.style.display="none";
+                vco=false;
+                vhm=false;
+                vc=true;
+            }else{
+                dc.style.display="none";
+                vc=false;
+            }
+        })
+
+        bco.addEventListener('click', function(){
+            if(vco==false){
+                dco.style.display="block";
+                dhm.style.display="none";
+                dc.style.display="none";
+                vc=false;
+                vhm=false;
+                vco=true;
+            }else{
+                dco.style.display="none";
+                vco=false;
+            }
+        })
+</script>
+</body>
+</html>
